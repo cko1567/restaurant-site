@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ember & Thyme is a neighborhood restaurant serving wood-fired seasonal plates, thoughtful wines, and warm hospitality."
+    />
+    <title>Ember & Thyme | Seasonal Restaurant</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="Ember & Thyme home">
+        <span class="brand-mark">E&T</span>
+        <span>Ember & Thyme</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation" data-nav>
+        <a href="#menu">Menu</a>
+        <a href="#story">Story</a>
+        <a href="#visit">Visit</a>
+        <a class="nav-action" href="#reservations">Reserve</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-label="Restaurant introduction">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Wood-fired seasonal dining</p>
+          <h1>Ember & Thyme</h1>
+          <p class="hero-copy">
+            A warm neighborhood restaurant built around live fire, local produce, and a wine list made for lingering.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#reservations">Reserve a table</a>
+            <a class="button secondary" href="#menu">View menu</a>
+          </div>
+        </div>
+        <aside class="service-note" aria-label="Service information">
+          <span>Dinner Tue-Sun</span>
+          <strong>5:00 PM - 10:30 PM</strong>
+        </aside>
+      </section>
+
+      <section class="intro-band" aria-label="Highlights">
+        <div class="intro-item">
+          <span>01</span>
+          <strong>Seasonal plates</strong>
+          <p>Market vegetables, coastal seafood, and heritage meats cooked over oak.</p>
+        </div>
+        <div class="intro-item">
+          <span>02</span>
+          <strong>Private dining</strong>
+          <p>A tucked-away room for birthdays, client dinners, and small celebrations.</p>
+        </div>
+        <div class="intro-item">
+          <span>03</span>
+          <strong>Weekend brunch</strong>
+          <p>Late mornings with baked eggs, citrus salads, and sparkling cocktails.</p>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu">
+        <div class="section-heading">
+          <p class="eyebrow">Current menu</p>
+          <h2>Food that follows the season</h2>
+          <p>
+            The menu changes often, but the rhythm stays steady: bright starters, wood-fired mains, and simple desserts.
+          </p>
+        </div>
+        <div class="menu-layout">
+          <div class="menu-list">
+            <article class="menu-item">
+              <div>
+                <h3>Coal-Roasted Carrots</h3>
+                <p>Whipped feta, pistachio dukkah, preserved lemon</p>
+              </div>
+              <span>$16</span>
+            </article>
+            <article class="menu-item">
+              <div>
+                <h3>Seared Scallops</h3>
+                <p>Cauliflower puree, brown butter, caper salsa</p>
+              </div>
+              <span>$32</span>
+            </article>
+            <article class="menu-item">
+              <div>
+                <h3>Oak-Grilled Ribeye</h3>
+                <p>Charred onion, peppercorn jus, sea salt potatoes</p>
+              </div>
+              <span>$48</span>
+            </article>
+            <article class="menu-item">
+              <div>
+                <h3>Hearth Mushroom Risotto</h3>
+                <p>Parmesan, thyme, roasted garlic, black pepper</p>
+              </div>
+              <span>$27</span>
+            </article>
+            <article class="menu-item">
+              <div>
+                <h3>Citrus Olive Oil Cake</h3>
+                <p>Blood orange, mascarpone cream, almond crumble</p>
+              </div>
+              <span>$12</span>
+            </article>
+          </div>
+          <figure class="menu-image">
+            <img
+              src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=85"
+              alt="A plated restaurant entree with vegetables and sauce"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="story-section" id="story">
+        <figure class="story-image">
+          <img
+            src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=85"
+            alt="A warmly lit restaurant dining room with set tables"
+          />
+        </figure>
+        <div class="story-copy">
+          <p class="eyebrow">Our room</p>
+          <h2>Relaxed service, serious cooking</h2>
+          <p>
+            Ember & Thyme brings together the comfort of a neighborhood dining room with the detail of a chef-led
+            kitchen. Every plate starts with carefully sourced ingredients and ends at the hearth.
+          </p>
+          <a class="text-link" href="#visit">Plan your visit</a>
+        </div>
+      </section>
+
+      <section class="reservations-section" id="reservations">
+        <div class="section-heading compact">
+          <p class="eyebrow">Reservations</p>
+          <h2>Book a table</h2>
+          <p>For parties larger than eight, call the dining room and we will help plan the evening.</p>
+        </div>
+        <form class="reservation-form" aria-label="Reservation request">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Date
+            <input type="date" name="date" required />
+          </label>
+          <label>
+            Party size
+            <select name="party" required>
+              <option value="">Select</option>
+              <option>2 guests</option>
+              <option>3 guests</option>
+              <option>4 guests</option>
+              <option>5 guests</option>
+              <option>6 guests</option>
+              <option>7 guests</option>
+              <option>8 guests</option>
+            </select>
+          </label>
+          <button class="button primary" type="submit">Request reservation</button>
+          <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+        </form>
+      </section>
+
+      <section class="visit-section" id="visit">
+        <div>
+          <p class="eyebrow">Visit</p>
+          <h2>1427 Willow Street, New York, NY</h2>
+          <p>Tuesday to Sunday, 5:00 PM - 10:30 PM<br />Weekend brunch, 10:00 AM - 2:00 PM</p>
+          <p><a href="tel:+12125550194">(212) 555-0194</a> · <a href="mailto:hello@emberthyme.example">hello@emberthyme.example</a></p>
+        </div>
+        <div class="hours">
+          <strong>Tonight's service</strong>
+          <span>Bar seats open for walk-ins</span>
+          <span>Kitchen closes at 10:00 PM</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Ember & Thyme</span>
+      <span>Seasonal dining over live fire</span>
+    </footer>
+  </body>
+</html>
