@@ -125,7 +125,7 @@ select {
   color: #fff;
   background:
     linear-gradient(90deg, rgba(13, 11, 9, 0.78), rgba(13, 11, 9, 0.18)),
-    url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1800&q=85") center / cover;
+    url("assets/hero-restaurant.jpg") center / cover;
 }
 
 .hero-overlay {
