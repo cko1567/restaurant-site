@@ -5,205 +5,310 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Ember & Thyme is a neighborhood restaurant serving wood-fired seasonal plates, thoughtful wines, and warm hospitality."
+      content="MT.Kim Martial Arts Spirit offers Taekwondo, Hapkido, after school care, summer camp, and family martial arts programs in Manassas, Virginia."
     />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; font-src 'self'; form-action 'self'; upgrade-insecure-requests"
     />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>Ember & Thyme | Seasonal Restaurant</title>
+    <title>MT.Kim Martial Arts Spirit | Taekwondo in Manassas, VA</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <header class="site-header" data-header>
-      <a class="brand" href="#home" aria-label="Ember & Thyme home">
-        <span class="brand-mark">E&T</span>
-        <span>Ember & Thyme</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="site-nav" aria-label="Primary navigation" data-nav>
-        <a href="#menu">Menu</a>
-        <a href="#story">Story</a>
-        <a href="#visit">Visit</a>
-        <a class="nav-action" href="#reservations">Reserve</a>
+      <div class="top-bar" aria-label="School contact information">
+        <a href="tel:+17036650906">703-665-0906</a>
+        <a href="mailto:mstjeon@gmail.com">mstjeon@gmail.com</a>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="MT.Kim Martial Arts Spirit home">
+          <span class="brand-mark" aria-hidden="true">MK</span>
+          <span class="brand-text">
+            <strong>MT.Kim</strong>
+            <small>Martial Arts Spirit</small>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="site-menu" data-nav-menu>
+          <a href="#programs">Programs</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#location">Location</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-cta" href="#contact">Free Trial</a>
+        </div>
       </nav>
     </header>
 
     <main>
-      <section class="hero" id="home" aria-label="Restaurant introduction">
-        <div class="hero-overlay"></div>
+      <section class="hero-section" id="home" aria-labelledby="hero-title">
         <div class="hero-content">
-          <p class="eyebrow">Wood-fired seasonal dining</p>
-          <h1>Ember & Thyme</h1>
+          <p class="eyebrow">Taekwondo and real-world self-defense in Manassas</p>
+          <h1 id="hero-title">MT.Kim Martial Arts Spirit</h1>
           <p class="hero-copy">
-            A warm neighborhood restaurant built around live fire, local produce, and a wine list made for lingering.
+            Build confidence, discipline, strength, and focus through martial arts programs for children, teens,
+            adults, and families.
           </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#reservations">Reserve a table</a>
-            <a class="button secondary" href="#menu">View menu</a>
+          <div class="hero-actions" aria-label="Primary calls to action">
+            <a class="button button-primary" href="#contact">Start a Free Trial</a>
+            <a class="button button-secondary" href="#programs">Explore Programs</a>
           </div>
         </div>
-        <aside class="service-note" aria-label="Service information">
-          <span>Dinner Tue-Sun</span>
-          <strong>5:00 PM - 10:30 PM</strong>
-        </aside>
-      </section>
 
-      <section class="intro-band" aria-label="Highlights">
-        <div class="intro-item">
-          <span>01</span>
-          <strong>Seasonal plates</strong>
-          <p>Market vegetables, coastal seafood, and heritage meats cooked over oak.</p>
-        </div>
-        <div class="intro-item">
-          <span>02</span>
-          <strong>Private dining</strong>
-          <p>A tucked-away room for birthdays, client dinners, and small celebrations.</p>
-        </div>
-        <div class="intro-item">
-          <span>03</span>
-          <strong>Weekend brunch</strong>
-          <p>Late mornings with baked eggs, citrus salads, and sparkling cocktails.</p>
-        </div>
-      </section>
-
-      <section class="menu-section" id="menu">
-        <div class="section-heading">
-          <p class="eyebrow">Current menu</p>
-          <h2>Food that follows the season</h2>
-          <p>
-            The menu changes often, but the rhythm stays steady: bright starters, wood-fired mains, and simple desserts.
-          </p>
-        </div>
-        <div class="menu-layout">
-          <div class="menu-list">
-            <article class="menu-item">
-              <div>
-                <h3>Coal-Roasted Carrots</h3>
-                <p>Whipped feta, pistachio dukkah, preserved lemon</p>
-              </div>
-              <span>$16</span>
-            </article>
-            <article class="menu-item">
-              <div>
-                <h3>Seared Scallops</h3>
-                <p>Cauliflower puree, brown butter, caper salsa</p>
-              </div>
-              <span>$32</span>
-            </article>
-            <article class="menu-item">
-              <div>
-                <h3>Oak-Grilled Ribeye</h3>
-                <p>Charred onion, peppercorn jus, sea salt potatoes</p>
-              </div>
-              <span>$48</span>
-            </article>
-            <article class="menu-item">
-              <div>
-                <h3>Hearth Mushroom Risotto</h3>
-                <p>Parmesan, thyme, roasted garlic, black pepper</p>
-              </div>
-              <span>$27</span>
-            </article>
-            <article class="menu-item">
-              <div>
-                <h3>Citrus Olive Oil Cake</h3>
-                <p>Blood orange, mascarpone cream, almond crumble</p>
-              </div>
-              <span>$12</span>
-            </article>
-          </div>
-          <figure class="menu-image">
-            <img
-              src="assets/menu-dish.jpg"
-              alt="A plated restaurant entree with vegetables and sauce"
-              loading="lazy"
-              decoding="async"
-            />
-          </figure>
-        </div>
-      </section>
-
-      <section class="story-section" id="story">
-        <figure class="story-image">
+        <figure class="hero-media">
           <img
-            src="assets/dining-room.jpg"
-            alt="A warmly lit restaurant dining room with set tables"
-            loading="lazy"
+            src="assets/taekwondo-training.jpg"
+            alt="Taekwondo students training together in a clean martial arts studio"
+            width="1280"
+            height="848"
             decoding="async"
           />
         </figure>
-        <div class="story-copy">
-          <p class="eyebrow">Our room</p>
-          <h2>Relaxed service, serious cooking</h2>
-          <p>
-            Ember & Thyme brings together the comfort of a neighborhood dining room with the detail of a chef-led
-            kitchen. Every plate starts with carefully sourced ingredients and ends at the hearth.
-          </p>
-          <a class="text-link" href="#visit">Plan your visit</a>
+
+        <dl class="trust-strip" aria-label="School highlights">
+          <div>
+            <dt>50+</dt>
+            <dd>years serving the D.C. metro area</dd>
+          </div>
+          <div>
+            <dt>10,000+</dt>
+            <dd>students taught through martial arts</dd>
+          </div>
+          <div>
+            <dt>16+</dt>
+            <dd>years in the Manassas community</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="intro-section" id="intro" aria-labelledby="intro-title">
+        <div class="section-kicker">Message from the head instructor</div>
+        <div class="intro-layout">
+          <div class="intro-copy">
+            <h2 id="intro-title">Training the next generation with discipline, respect, and purpose.</h2>
+            <p>
+              MT.Kim Martial Arts Spirit helps students grow mentally and physically through structured training rooted
+              in honesty, loyalty, effort, confidence, patience, and self-control.
+            </p>
+            <p>
+              Led by Master Jeon, our school welcomes families to experience practical instruction, a supportive
+              community, and programs designed for long-term personal growth.
+            </p>
+          </div>
+          <aside class="instructor-card" aria-label="Instructor information">
+            <figure>
+              <img
+                src="assets/master-jeon.jpg"
+                alt="Master Jeon, head instructor at MT.Kim Martial Arts Spirit"
+                width="200"
+                height="300"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <div>
+              <strong>Master Jeon</strong>
+              <span>Head Instructor</span>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section class="reservations-section" id="reservations">
-        <div class="section-heading compact">
-          <p class="eyebrow">Reservations</p>
-          <h2>Book a table</h2>
-          <p>For parties larger than eight, call the dining room and we will help plan the evening.</p>
+      <section class="why-section" id="why-us" aria-labelledby="why-title">
+        <div class="section-heading">
+          <p class="eyebrow">Why families choose us</p>
+          <h2 id="why-title">A martial arts school built for confidence, character, and skill.</h2>
         </div>
-        <form class="reservation-form" aria-label="Reservation request">
-          <label>
-            Name
-            <input type="text" name="name" autocomplete="name" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" autocomplete="email" required />
-          </label>
-          <label>
-            Date
-            <input type="date" name="date" required />
-          </label>
-          <label>
-            Party size
-            <select name="party" required>
-              <option value="">Select</option>
-              <option>2 guests</option>
-              <option>3 guests</option>
-              <option>4 guests</option>
-              <option>5 guests</option>
-              <option>6 guests</option>
-              <option>7 guests</option>
-              <option>8 guests</option>
-            </select>
-          </label>
-          <button class="button primary" type="submit">Request reservation</button>
-          <p class="form-status" role="status" aria-live="polite" data-form-status></p>
-        </form>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="card-index">01</span>
+            <h3>5-Star Google Reviews</h3>
+            <p>Trusted by students and families who value patient instruction, structure, and real progress.</p>
+          </article>
+          <article class="feature-card">
+            <span class="card-index">02</span>
+            <h3>Family-Friendly Programs</h3>
+            <p>Programs for kids, teens, adults, and families make it easier to train and grow together.</p>
+          </article>
+          <article class="feature-card">
+            <span class="card-index">03</span>
+            <h3>Confidence and Discipline</h3>
+            <p>Students develop focus, respect, self-control, and the confidence to keep improving.</p>
+          </article>
+          <article class="feature-card">
+            <span class="card-index">04</span>
+            <h3>Practical Self-Defense</h3>
+            <p>Hapkido and self-defense training focus on realistic movement, awareness, and safety.</p>
+          </article>
+        </div>
       </section>
 
-      <section class="visit-section" id="visit">
+      <section class="programs-section" id="programs" aria-labelledby="programs-title">
+        <div class="section-heading">
+          <p class="eyebrow">World-class martial arts programs</p>
+          <h2 id="programs-title">Choose the training path that fits your goals.</h2>
+        </div>
+
+        <div class="program-grid">
+          <article class="program-card">
+            <span class="program-label">After School</span>
+            <h3>After School Care</h3>
+            <p>Supportive after-school care that helps children stay active, focused, and confident.</p>
+            <a href="#contact">Ask about after school care</a>
+          </article>
+          <article class="program-card">
+            <span class="program-label">Children</span>
+            <h3>Peewee and Kids Taekwondo</h3>
+            <p>Age-appropriate martial arts training for healthier bodies, stronger focus, and better behavior.</p>
+            <a href="#contact">Start kids training</a>
+          </article>
+          <article class="program-card">
+            <span class="program-label">Family</span>
+            <h3>Regular Program</h3>
+            <p>Training for ages 8 and up, including teens, adults, and families who want to improve together.</p>
+            <a href="#contact">View regular program</a>
+          </article>
+          <article class="program-card">
+            <span class="program-label">Self-Defense</span>
+            <h3>Hapkido</h3>
+            <p>Real-world self-defense built from practical techniques, control, awareness, and confidence.</p>
+            <a href="#contact">Explore Hapkido</a>
+          </article>
+          <article class="program-card program-card-wide">
+            <span class="program-label">Seasonal</span>
+            <h3>Summer Camp</h3>
+            <p>Fun, structured seasonal camp designed to keep students active while building life skills.</p>
+            <a href="#contact">Ask about camp</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="reviews-section" id="reviews" aria-labelledby="reviews-title">
         <div>
-          <p class="eyebrow">Visit</p>
-          <h2>1427 Willow Street, New York, NY</h2>
-          <p>Tuesday to Sunday, 5:00 PM - 10:30 PM<br />Weekend brunch, 10:00 AM - 2:00 PM</p>
-          <p><a href="tel:+12125550194">(212) 555-0194</a> | <a href="mailto:hello@emberthyme.example">hello@emberthyme.example</a></p>
+          <p class="eyebrow">Community trust</p>
+          <h2 id="reviews-title">Highly recommended by students and families.</h2>
         </div>
-        <div class="hours">
-          <strong>Tonight's service</strong>
-          <span>Bar seats open for walk-ins</span>
-          <span>Kitchen closes at 10:00 PM</span>
+        <div class="review-panel">
+          <strong>5-Star Google Reviews</strong>
+          <p>
+            Read what local families say about the instruction, discipline, confidence, and care they experience at
+            MT.Kim Martial Arts Spirit.
+          </p>
+          <a
+            class="button button-secondary"
+            href="https://www.google.com/search?q=MT.Kim+Martial+Arts+Spirit+reviews"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read Google Reviews
+          </a>
         </div>
+      </section>
+
+      <section class="location-section" id="location" aria-labelledby="location-title">
+        <div class="location-copy">
+          <p class="eyebrow">Visit our school</p>
+          <h2 id="location-title">9832 Liberia Ave, Manassas, VA 20110</h2>
+          <p>
+            Call or email to ask about class availability, after school care, summer camp, and free trial options.
+          </p>
+        </div>
+        <address class="contact-panel">
+          <a href="tel:+17036650906">703-665-0906</a>
+          <a href="mailto:mstjeon@gmail.com">mstjeon@gmail.com</a>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=9832+Liberia+Ave+Manassas+VA+20110"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open in Google Maps
+          </a>
+        </address>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <p class="eyebrow">Get started</p>
+          <h2 id="contact-title">Request a free trial class.</h2>
+          <p>
+            Share the basics and our team will help you choose the right program for your child, yourself, or your
+            family.
+          </p>
+        </div>
+
+        <form class="contact-form" action="#" method="post" data-contact-form>
+          <div class="form-grid">
+            <label for="parent-name">
+              Parent Name
+              <input id="parent-name" name="parentName" type="text" autocomplete="name" required />
+            </label>
+            <label for="participant-name">
+              Participant Name
+              <input id="participant-name" name="participantName" type="text" autocomplete="name" required />
+            </label>
+            <label for="age">
+              Age
+              <input id="age" name="age" type="number" inputmode="numeric" min="3" max="99" required />
+            </label>
+            <label for="email">
+              Email Address
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </label>
+            <label for="phone">
+              Phone
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+            </label>
+            <label for="program">
+              Select Program
+              <select id="program" name="program" required>
+                <option value="">Select Program</option>
+                <option value="kids-taekwondo">Kids Taekwondo</option>
+                <option value="adult-taekwondo">Adult Taekwondo</option>
+                <option value="family-taekwondo">Family Taekwondo</option>
+                <option value="hapkido">Hapkido</option>
+                <option value="summer-camp">Summer Camp</option>
+                <option value="after-school-care">After School Care</option>
+              </select>
+            </label>
+            <label class="form-wide" for="message">
+              Message
+              <textarea id="message" name="message" rows="5"></textarea>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button class="button button-primary" type="submit">Submit Request</button>
+            <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+          </div>
+        </form>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>Ember & Thyme</span>
-      <span>Seasonal dining over live fire</span>
+      <a class="footer-brand" href="#home">MT.Kim Martial Arts Spirit</a>
+      <div class="footer-links" aria-label="Footer navigation">
+        <a href="#programs">Programs</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Free Trial</a>
+      </div>
+      <p>All Rights Reserved © 2017 Mountain Kim Spirit | 9832 Liberia Ave, Manassas, VA 20110</p>
     </footer>
   </body>
 </html>
