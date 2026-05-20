@@ -249,7 +249,7 @@ dd {
   padding: clamp(88px, 10vw, 144px) var(--page) clamp(24px, 4vw, 48px);
   overflow: hidden;
   color: var(--white);
-  background: url("assets/taekwondo-training.jpg") center / cover no-repeat;
+  background: url("assets/hero-class.jpg") center / cover no-repeat;
 }
 
 .hero-section::before,
@@ -607,7 +607,7 @@ h3 {
   object-fit: cover;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  filter: grayscale(1) contrast(1.03);
+  filter: saturate(0.82) contrast(1.04);
 }
 
 .program-detail-section,
