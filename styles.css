@@ -1,9 +1,9 @@
 :root {
   --black: #080808;
   --ink: #171717;
-  --muted: #66615b;
-  --stone: #f6f3ee;
-  --paper: #fffdf9;
+  --muted: #5f5f5b;
+  --stone: #f4f4f1;
+  --paper: #ffffff;
   --white: #ffffff;
   --line: rgba(23, 23, 23, 0.12);
   --line-strong: rgba(23, 23, 23, 0.22);
@@ -26,7 +26,11 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 104px;
+  scroll-padding-top: 0;
+}
+
+[id$="-title"] {
+  scroll-margin-top: 112px;
 }
 
 body {
@@ -194,10 +198,21 @@ dd {
   background: var(--black);
 }
 
+.hero-section .button-primary {
+  color: var(--black);
+  border-color: var(--white);
+  background: var(--white);
+}
+
 .button-secondary {
   color: var(--black);
   border-color: var(--line-strong);
   background: transparent;
+}
+
+.hero-section .button-secondary {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.44);
 }
 
 .nav-toggle {
@@ -222,18 +237,44 @@ dd {
 }
 
 .hero-section {
+  position: relative;
+  isolation: isolate;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr);
-  gap: clamp(40px, 6vw, 96px);
-  align-items: center;
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: clamp(72px, 9vw, 128px) var(--page) 0;
-  background: var(--paper);
+  grid-template-columns: minmax(0, var(--max));
+  justify-content: center;
+  align-content: end;
+  gap: clamp(48px, 8vw, 96px);
+  min-height: clamp(560px, 78svh, 820px);
+  margin: 0;
+  padding: clamp(88px, 10vw, 144px) var(--page) clamp(24px, 4vw, 48px);
+  overflow: hidden;
+  color: var(--white);
+  background: url("assets/taekwondo-training.jpg") center / cover no-repeat;
+}
+
+.hero-section::before,
+.hero-section::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+}
+
+.hero-section::before {
+  background:
+    linear-gradient(110deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0.62) 48%, rgba(0, 0, 0, 0.14) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.02) 42%, rgba(0, 0, 0, 0.82) 100%);
+}
+
+.hero-section::after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 96px 100%;
+  opacity: 0.32;
 }
 
 .hero-content {
-  padding-bottom: clamp(40px, 7vw, 80px);
+  max-width: var(--max);
+  padding-bottom: 0;
 }
 
 .eyebrow,
@@ -248,6 +289,7 @@ dd {
 }
 
 .hero-content .eyebrow {
+  color: #d0b079;
   margin-bottom: 20px;
 }
 
@@ -261,7 +303,7 @@ h2 {
 
 h1 {
   max-width: 12ch;
-  font-size: clamp(3.4rem, 7.2vw, 6.7rem);
+  font-size: clamp(3.15rem, 7.4vw, 7rem);
 }
 
 h2 {
@@ -276,10 +318,25 @@ h3 {
 }
 
 .hero-copy {
-  max-width: 620px;
+  max-width: 560px;
   margin-top: 24px;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.76);
   font-size: clamp(1.05rem, 1.3vw, 1.24rem);
+}
+
+.hero-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.hero-note span + span {
+  padding-left: 14px;
+  border-left: 1px solid rgba(255, 255, 255, 0.32);
 }
 
 .hero-actions {
@@ -290,14 +347,7 @@ h3 {
 }
 
 .hero-media {
-  position: relative;
-  align-self: end;
-  margin-bottom: clamp(40px, 7vw, 80px);
-  padding: 12px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--white);
-  box-shadow: var(--shadow);
+  display: none;
 }
 
 .hero-media::before {
@@ -321,15 +371,17 @@ h3 {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  color: var(--white);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(16px);
 }
 
 .trust-strip div {
   min-height: 128px;
   padding: 28px 32px;
-  border-right: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.58);
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .trust-strip div:last-child {
@@ -346,7 +398,7 @@ h3 {
 .trust-strip dd {
   max-width: 230px;
   margin-top: 10px;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 .intro-section,
@@ -464,11 +516,11 @@ h3 {
 }
 
 .program-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .program-card {
-  min-height: 284px;
+  min-height: 260px;
   background: var(--white);
 }
 
@@ -664,7 +716,7 @@ h3 {
 
 @media (max-width: 1180px) {
   .program-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -690,8 +742,8 @@ h3 {
 }
 
 @media (max-width: 860px) {
-  html {
-    scroll-padding-top: 84px;
+  [id$="-title"] {
+    scroll-margin-top: 88px;
   }
 
   .top-bar {
@@ -699,12 +751,21 @@ h3 {
   }
 
   .main-nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44px;
     min-height: 72px;
+    gap: 16px;
   }
 
   .nav-toggle {
+    position: absolute;
+    top: 50%;
+    right: var(--page);
+    z-index: 2;
     display: inline-grid;
-    margin-left: auto;
+    justify-self: end;
+    margin-left: 0;
+    transform: translateY(-50%);
   }
 
   .brand {
@@ -778,8 +839,17 @@ h3 {
   }
 
   h1 {
-    max-width: 9ch;
-    font-size: clamp(3rem, 15vw, 4.3rem);
+    max-width: 11ch;
+    font-size: clamp(2.45rem, 11vw, 3.35rem);
+  }
+
+  .hero-note {
+    max-width: 32ch;
+  }
+
+  .hero-note span + span {
+    padding-left: 0;
+    border-left: 0;
   }
 
   h2 {
