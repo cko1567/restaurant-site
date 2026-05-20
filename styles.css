@@ -610,6 +610,12 @@ h3 {
   filter: saturate(0.82) contrast(1.04);
 }
 
+.program-visual-full img {
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
 .program-detail-section,
 .program-related-section,
 .program-cta-section {
