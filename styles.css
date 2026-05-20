@@ -249,7 +249,7 @@ dd {
   padding: clamp(88px, 10vw, 144px) var(--page) clamp(24px, 4vw, 48px);
   overflow: hidden;
   color: var(--white);
-  background: url("assets/hero-class.jpg") center / cover no-repeat;
+  background: url("assets/hero-class.jpg?v=school-photos-20260520") center / cover no-repeat;
 }
 
 .hero-section::before,
