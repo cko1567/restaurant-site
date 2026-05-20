@@ -1,15 +1,16 @@
 # Security Notes
 
-This restaurant site is designed as a static GitHub Pages site. It has no server-side code, database, login, payment flow, or admin area.
+This martial arts school site is designed as a static GitHub Pages site. It has no server-side code, database, login, payment flow, or admin area.
 
 ## Current Controls
 
 - Uses HTTPS when served through GitHub Pages.
-- Uses a restrictive Content Security Policy in `index.html`.
+- Uses a restrictive Content Security Policy in each HTML page.
 - Loads JavaScript, CSS, and images from this repository only.
+- Uses local video thumbnails and outbound YouTube links instead of embedding remote players.
 - Does not send reservation form data to a server.
 - Writes form feedback with `textContent`, not `innerHTML`.
-- Avoids third-party scripts, tracking pixels, analytics, and remote fonts.
+- Avoids analytics, tracking pixels, and remote fonts.
 
 ## GitHub Pages Limitations
 
